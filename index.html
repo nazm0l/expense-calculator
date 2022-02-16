@@ -22,19 +22,20 @@
                 <div>
                     <h2 class="text-3xl font-bold">Income</h2>
                     <label>Income:</label>
-                    <input class="bg-gray-300 mt-5 p-1" type="text" value="">
+                    <input id="income" class="bg-gray-300 mt-5 p-1" type="text" value="">
                 </div>
                 <div class="mt-8">
                     <h2 class="text-3xl font-bold">Expense</h2>
+                    
                     <label>Food:</label>
-                    <input class="bg-gray-300 mt-5 p-1" type="text" value=""> <br>
+                    <input id="food" class="bg-gray-300 mt-5 p-1" type="text" value=""> <br>
                     <label>Rent:</label>
-                    <input class="bg-gray-300 mt-5 p-1" type="text" value=""> <br>
+                    <input id="rent" class="bg-gray-300 mt-5 p-1" type="text" value=""> <br>
                     <label>Clothes:</label>
-                    <input class="bg-gray-300 mt-5 p-1" type="text" value="">
+                    <input id="clothes" class="bg-gray-300 mt-5 p-1" type="text" value="">
                 </div>
                 <!-- calculate button  -->
-                <button class="bg-blue-400 mt-5 p-2 rounded font-semibold text-white w-1/4">Calculate</button>
+                <button id="calculate" class="bg-blue-400 mt-5 p-2 rounded font-semibold text-white w-1/4">Calculate</button>
                 <!-- Total expense and balance  -->
                 <h2 class="text-2xl mt-5 font-semibold">Total Expenses: <span id="total-expenses">00</span></h2>
                 <h2 class="text-2xl mt-3 font-semibold">Balance: <span id="balance">00</span></h2>
@@ -42,8 +43,8 @@
                 <!-- save section -->
                 <div>
                     <label>Save:</label>
-                    <input class="bg-gray-300 p-2 mt-5 w-20" type="text" value=""> <span>%</span>
-                    <button class="bg-blue-400 mt-5 p-2 rounded font-semibold text-white w-1/4">Save</button>
+                    <input id="save" class="bg-gray-300 p-2 mt-5 w-20" type="text" value=""> <span>%</span>
+                    <button id="save-button" class="bg-blue-400 mt-5 p-2 rounded font-semibold text-white w-1/4">Save</button>
                 </div>
                 <!-- Total expense and balance  -->
                 <h2 class="text-2xl mt-5 font-semibold">Saving Amount: <span id="saving-amount">00</span></h2>
@@ -51,5 +52,7 @@
             </div>
         </div>
     </main>
+    <!-- Script  -->
+    <script src="js/app.js"></script>
 </body>
 </html>
