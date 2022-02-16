@@ -11,10 +11,8 @@ function validation(variableName) {
   }
 }
 
-document.getElementById("calculate").addEventListener("click", function () {
-  //   get income value
-  const incomeBalance = parseFloat(income.value);
-  validation(incomeBalance);
+// total expense function
+function expenseCalc() {
   //   get expenses value
   const foodExpense = parseFloat(food.value);
   const rentExpense = parseFloat(rent.value);
@@ -22,21 +20,53 @@ document.getElementById("calculate").addEventListener("click", function () {
   validation(foodExpense);
   validation(rentExpense);
   validation(clothesExpense);
-  totalExpense = foodExpense + rentExpense + clothesExpense;
 
-  //   update total expenses
-  const totalExpenses = document.getElementById("total-expenses");
-  totalExpenses.innerText = totalExpense;
+  let totalExpense = foodExpense + rentExpense + clothesExpense;
+  return totalExpense;
+}
 
+// balance update function
+function balanceUpdate() {
+  //   get income value
+  const incomeBalance = parseFloat(income.value);
+  validation(incomeBalance);
   //   update balance
   const balance = document.getElementById("balance");
-  balance.innerText = incomeBalance - totalExpense;
+  let totalBalance = incomeBalance - expenseCalc();
+  balance.innerText = totalBalance;
+  return totalBalance;
+}
+
+// calculate button handler
+
+document.getElementById("calculate").addEventListener("click", function () {
+  const totalExpenses = document.getElementById("total-expenses");
+  totalExpenses.innerText = expenseCalc();
+
+  balanceUpdate();
 });
 
 // savings calculate
 
 const save = document.getElementById("save");
 
+// save button handler
+
 document.getElementById("save-button").addEventListener("click", function () {
+  const incomeBalance = parseFloat(income.value);
   percentageValue = parseFloat(save.value);
+  let savingAmount = (percentageValue / 100) * incomeBalance;
+
+  //   update saving amount
+  const savingTotal = document.getElementById("saving-amount");
+  if (savingAmount < balanceUpdate()) {
+  } else {
+    return alert("please input valid saving percent");
+  }
+  savingTotal.innerText = savingAmount;
+
+  //   update remaining balance
+  const remainingBalance = document.getElementById("remaining-balance");
+
+  remainingBalance.innerText = balanceUpdate() - savingAmount;
 });
