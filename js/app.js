@@ -59,7 +59,7 @@ document.getElementById("save-button").addEventListener("click", function () {
 
   //   update saving amount
   const savingTotal = document.getElementById("saving-amount");
-  if (savingAmount < balanceUpdate()) {
+  if (savingAmount <= balanceUpdate()) {
   } else {
     return alert("please input valid saving percent");
   }
