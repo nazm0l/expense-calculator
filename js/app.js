@@ -11,7 +11,7 @@ function validation(variableName) {
   }
 }
 
-// total expense function
+//---------------------- total expense function ----------------------
 function expenseCalc() {
   //   get expenses value
   const foodExpense = parseFloat(food.value);
@@ -25,7 +25,7 @@ function expenseCalc() {
   return totalExpense;
 }
 
-// balance update function
+//-------------------- balance update function ----------------------
 function balanceUpdate() {
   //   get income value
   const incomeBalance = parseFloat(income.value);
@@ -37,7 +37,7 @@ function balanceUpdate() {
   return totalBalance;
 }
 
-// calculate button handler
+//------------------------ calculate button handler -----------------------
 
 document.getElementById("calculate").addEventListener("click", function () {
   const totalExpenses = document.getElementById("total-expenses");
@@ -50,7 +50,7 @@ document.getElementById("calculate").addEventListener("click", function () {
 
 const save = document.getElementById("save");
 
-// save button handler
+//------------------------ save button handler ----------------------------
 
 document.getElementById("save-button").addEventListener("click", function () {
   const incomeBalance = parseFloat(income.value);

@@ -10,7 +10,7 @@
 </head>
 <body>
     <main class="container mx-auto">
-        <h1 class="text-3xl md:text-5xl text-center mt-8 font-bold">Expense Calculator</h1>
+        <h1 class="text-3xl md:text-5xl text-center mt-8 p-5 font-bold bg-gradient-to-r from-yellow-50 to-white-500">Expense Calculator</h1>
         <!-- image and form section start -->
         <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-10">
             <!-- image section  -->
@@ -18,37 +18,37 @@
                 <img src="images/money.jpg" alt="" srcset="">
             </div>
             <!-- form Section  -->
-            <div class="text-center bg-gray-100 p-8 rounded">
+            <div class="text-center bg-green-50 p-8 rounded">
                 <div>
                     <h2 class="text-3xl font-bold">Income</h2>
                     <label>Income:</label>
-                    <input id="income" class="bg-gray-300 mt-5 p-1" type="text" value="">
+                    <input id="income" class="bg-gray-300 rounded mt-5 p-1" type="text" value="">
                 </div>
                 <div class="mt-8">
                     <h2 class="text-3xl font-bold">Expense</h2>
                     
                     <label>Food:</label>
-                    <input id="food" class="bg-gray-300 mt-5 p-1" type="text" value=""> <br>
+                    <input id="food" class="bg-gray-300 rounded mt-5 p-1" type="text" value=""> <br>
                     <label>Rent:</label>
-                    <input id="rent" class="bg-gray-300 mt-5 p-1" type="text" value=""> <br>
+                    <input id="rent" class="bg-gray-300 rounded mt-5 p-1" type="text" value=""> <br>
                     <label>Clothes:</label>
-                    <input id="clothes" class="bg-gray-300 mt-5 p-1" type="text" value="">
+                    <input id="clothes" class="bg-gray-300 rounded mt-5 p-1" type="text" value="">
                 </div>
                 <!-- calculate button  -->
-                <button id="calculate" class="bg-blue-400 mt-5 p-2 rounded font-semibold text-white w-1/4">Calculate</button>
+                <button id="calculate" class="bg-cyan-600 mt-5 p-2 rounded font-semibold text-white w-1/4">Calculate</button>
                 <!-- Total expense and balance  -->
-                <h2 class="text-2xl mt-5 font-semibold">Total Expenses: <span id="total-expenses">00</span></h2>
-                <h2 class="text-2xl mt-3 font-semibold">Balance: <span id="balance">00</span></h2>
+                <h2 class="text-xl mt-5 font-semibold">Total Expenses: <span id="total-expenses">00</span></h2>
+                <h2 class="text-xl mt-3 font-semibold">Balance: <span id="balance">00</span></h2>
 
                 <!-- save section -->
                 <div>
                     <label>Save:</label>
-                    <input id="save" class="bg-gray-300 p-2 mt-5 w-20" type="text" value=""> <span>%</span>
-                    <button id="save-button" class="bg-blue-400 mt-5 p-2 rounded font-semibold text-white w-1/4">Save</button>
+                    <input id="save" class="bg-gray-300 rounded p-2 mt-5 w-20" type="text" value=""> <span>%</span>
+                    <button id="save-button" class="bg-cyan-600 mt-5 p-2 rounded font-semibold text-white w-1/4">Save</button>
                 </div>
                 <!-- Total expense and balance  -->
-                <h2 class="text-2xl mt-5 font-semibold">Saving Amount: <span id="saving-amount">00</span></h2>
-                <h2 class="text-2xl mt-3 font-semibold">Remaining Balance: <span id="remaining-balance">00</span></h2>
+                <h2 class="text-xl mt-5 font-semibold">Saving Amount: <span id="saving-amount">00</span></h2>
+                <h2 class="text-xl mt-3 font-semibold">Remaining Balance: <span id="remaining-balance">00</span></h2>
             </div>
         </div>
     </main>
